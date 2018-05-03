@@ -1,7 +1,7 @@
 class CreateAssets < ActiveRecord::Migration[5.1]
   def change
     create_table :assets do |t|
-      t.integer :userId
+      t.integer :user_id
       t.integer :yeezy
       t.integer :grammy
       t.integer :persianRug
