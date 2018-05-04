@@ -1,14 +1,15 @@
 module Api
   module V1
     class ScoresController < ApplicationController
-      before_action :score_params, :set_score, only: [:show, :destroy, :update]
+      before_action :score_params, only: [:show, :update]
+      before_action :set_score, only: [:show, :destroy, :update]
       def index
         scores = Score.all
         render json: scores
       end
 
       def show
-        render json: set_scores
+        render json: @score
       end
 
       def create
@@ -17,13 +18,11 @@ module Api
       end
 
       def update
-        score = set_score
-        score = score.update(score_params)
-        render json: score
+        @score.update(score_params)
+        render json: @score
       end
 
       def destroy
-        @score = set_score
         @score.delete()
         render json: Score.all
       end
@@ -31,11 +30,11 @@ module Api
       private
 
       def set_score
-        @score = Score.find(score_params)
+        @score = Score.find(params[:id])
       end
 
       def score_params
-        params.require(:score).permit(:userId, :value)
+        params.require(:score).permit(:user_id, :value)
       end
     end
   end

@@ -12,6 +12,7 @@ module Api
       end
 
       def create
+        # byebug
         user = User.create(user_params)
         render json: User.all
       end
@@ -23,7 +24,7 @@ module Api
       end
 
       def user_params
-        params.require(:user).permit(:name, :has_secure_password)
+        params.permit(:name, :password)
       end
     end
   end
