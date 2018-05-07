@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import KanyeContainer from './kanyeContainer.js'
+import KanyeContainer from './introPage.js'
 import './App.css';
 
 class App extends Component {

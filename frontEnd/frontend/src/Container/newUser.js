@@ -9,7 +9,7 @@ class NewUser extends React.Component{
         <label>Username</label><input  type="text" name="username"/><br />
         <label>Password</label><input  type="password" name="password"/><br />
         <label>Password Confirmation</label><input  type="password" name="passwordConfirm"/>
-        <button type="submit">Signup</button>
+        <button type="submit" onSubmit>Signup</button>
       </form>
     </div>
     )
