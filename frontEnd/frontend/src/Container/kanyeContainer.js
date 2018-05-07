@@ -9,7 +9,7 @@ constructor(){
 super();
   this.state ={
   user: [],
-  score: 0,
+  score: 50000,
   assets: {
     yeezy:0,
     grammy:0,
