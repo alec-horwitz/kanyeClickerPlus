@@ -27,9 +27,10 @@ componentDidMount(){
 }
 
   render(){
+    console.log(this.state.users);
     return(
       <div>
-      <KanyeContainer/>
+      <NewUser users={this.state.users}/>
       </div>
     )
   }
