@@ -19,12 +19,15 @@ class NewUser extends React.Component{
     if ((this.state.password === this.state.passwordConfirm) && (index < 0)) {
       fetch("http://localhost:3000/api/v1/users", {
         method: "post",
-        header: {'content-type': 'application/json'},
+        headers: {'content-type': 'application/json'},
         body: JSON.stringify({name:this.state.username, password:this.state.password})
       }).then(res => res.json()).then(user => {
         console.log(this.props.users[index]);
       })
-    } else {
+    } else if (index > -1) {
+      console.log("Username already taken!");
+      console.log("Try Again");
+    }{
       console.log("your password and password confirmation do not match!");
       console.log("Try Again");
     }
