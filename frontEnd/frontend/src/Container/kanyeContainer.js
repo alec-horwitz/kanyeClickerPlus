@@ -1,5 +1,4 @@
 import React from 'react'
-import KanyeClickHead from "../presentational/kanyeClickHead.js"
 import KanyeAssets from "../presentational/kanyeAssets.js"
 
 
@@ -18,9 +17,9 @@ super();
   }
 }
 componentDidMount(){
-  setInterval(()=>{this.collect(this.state.assets.yeezy,50)},1000)
-  setInterval(()=>{this.collect(this.state.assets.grammy,1000)},1000)
-  setInterval(()=>{this.collect(this.state.assets.persianRug,10000)},1000)
+  setInterval(()=>{this.collect(this.state.assets.yeezy,1)},1000)
+  setInterval(()=>{this.collect(this.state.assets.grammy,10)},1000)
+  setInterval(()=>{this.collect(this.state.assets.persianRug,100)},1000)
 }
 clickKanye = () =>{
 this.setState({score: this.state.score + 1})
@@ -38,10 +37,10 @@ this.setState({score: this.state.score + (count*amount)})
 
 render(){
   return(
-  <div>
-  <label>Ye:</label>{this.state.score}
-  <KanyeClickHead onClick={this.clickKanye}/>
-  <KanyeAssets assets={this.state.assets} purchase={this.purchase} collect={this.collect}/>
+
+    <div>
+      <KanyeAssets assets={this.state.assets} purchase={this.purchase} onClick={this.clickKanye} score={this.state.score} />
+
   </div>
   )
 }
