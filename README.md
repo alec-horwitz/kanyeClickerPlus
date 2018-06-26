@@ -2,6 +2,10 @@
 
 Instuctions: 
 
+Fork this repository and clone it to your computer.
+
+Open up a terminal window and do the following:
+
 Backend:
 
 Navigate to the backEnd folder and run the following commands:
@@ -9,6 +13,7 @@ Navigate to the backEnd folder and run the following commands:
 * rails db:migrate
 * rails db:reset
 * rails s
+
 
 Frontend:
 
