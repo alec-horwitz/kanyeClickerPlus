@@ -5,10 +5,10 @@ Instuctions:
 Backend:
 
 Navigate to the backEnd folder and run the following commands:
-bundle install
-rails db:migrate
-rails db:reset
-rails s
+-bundle install
+-rails db:migrate
+-rails db:reset
+-rails s
 
 Frontend:
 
