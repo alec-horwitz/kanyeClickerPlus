@@ -13,5 +13,5 @@ Navigate to the backEnd folder and run the following commands:
 Frontend:
 
 Navigate to the frontEnd folder and run the following commands:
-npm install
-npm start
+* npm install
+* npm start
