@@ -14,6 +14,8 @@ Navigate to the backEnd folder and run the following commands:
 * rails db:reset
 * rails s
 
+Make sure it is running on port 3000
+
 
 Frontend:
 
