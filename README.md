@@ -19,6 +19,6 @@ Make sure it is running on port 3000
 
 Frontend:
 
-Navigate to the frontEnd folder and run the following commands:
+Navigate to the frontEnd/frontend folder and run the following commands:
 * npm install
 * npm start
